@@ -1,0 +1,47 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int score = 0;
+
+        System.out.println("What's my favorite color");
+        String color = sc.nextLine();
+
+        if (color.equals("green") || color == "Green"){
+	        System.out.println("1 point");
+            score++;
+        } else {
+            System.out.println("0 points");
+        }
+
+
+        System.out.println("What's my age?");
+        int age = sc.nextInt();
+
+        if (age == 19){
+	        System.out.println("1 point");
+        score++;
+
+        } else {
+            System.out.println("0 points");
+        }
+
+
+        System.out.println("What school do I go to?");
+         sc.nextLine();
+        String school = sc.nextLine();
+
+        if (school.equals ("Marist")){
+	        System.out.println("1 point");
+        score++;
+        } else if (school.equals ("marist")){
+            System.out.println("1 point");
+        score++;
+        } else {
+            System.out.println("0 points");
+        }
+
+            System.out.println("Final Score: " + score);
+    
+ }
+}
