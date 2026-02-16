@@ -14,3 +14,4 @@ public class Main {
 
     }
 }
+// I learned how charAt keeps track of characters in a string
