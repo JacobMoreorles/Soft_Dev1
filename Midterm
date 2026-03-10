@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Midterm {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        // At least 3 variables (totalCost, grams, itemCount) 
+        // double is int but for numbers with decimals
+        double totalCost = 0.0;
+        double pricePerGram = 0.05;
+        
+        System.out.print("How many items are you printing? ");
+        int itemCount = input.nextInt();
+
+        // At least 1 For or While Loop 
+        // i keeps track of users item count
+        for (int i = 0; i < itemCount; i++) {
+            System.out.print("Enter the weight of item " + (i + 1) + " in grams: ");
+            double grams = input.nextDouble();
+
+            // At least one If/Elif/Else 
+            // Applies a discount if the print is heavy 
+            if (grams > 100) {
+                double discountedPrice = grams * (pricePerGram - 0.01);
+                totalCost = totalCost + discountedPrice;
+                System.out.println("Bulk discount applied.");
+            // otherwise standard pricing is applied to total cost
+            } else {
+                double standardPrice = grams * pricePerGram;
+                totalCost = totalCost + standardPrice;
+            }
+        }
+
+        // Output final cost 
+        System.out.println("Total project cost: $" + totalCost);
+        input.close();
+    }
+}
