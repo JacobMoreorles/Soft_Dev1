@@ -1,0 +1,22 @@
+public class Main {
+    public static void main(String[] args) {
+    student s1 = new student("Jacob", "2028", 5.0, 12345);
+    student s2 = new student("Crisitan", "2028", 3.5, 54321);
+    student s3 = new student("Mason", "2027", 1.0, 11111);
+    student s4 = new student("Tristan", "2027", 3.8, 10000);
+    student s5 = new student("Sara", "2027", 4.0, 98765);
+
+    System.out.println(s1.name + " honor roll: " + s1.honors());
+    System.out.println(s2.name + " honor roll: " + s2.honors());
+    System.out.println(s3.name + " honor roll: " + s3.honors());
+    System.out.println(s4.name + " honor roll: " + s4.honors());
+    System.out.println(s5.name + " honor roll: " + s5.honors());
+
+    s1.lunch();
+    s2.lunch();
+    s3.lunch();
+    s4.lunch();
+    s5.lunch();
+
+    }
+}
