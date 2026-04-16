@@ -1,0 +1,30 @@
+public class student{
+    String name;
+    String year;
+    double gpa;
+    int id;
+
+    public student(String n, String y, double g, int i){
+    name = n;
+    year = y;
+    gpa = g;
+    id = i;
+    }
+
+    //new method
+        boolean honors(){
+            return gpa > 3.6;
+        }
+    
+        
+
+    //new method
+    void lunch(){
+        int randomId = (int)(Math.random() * 90000) + 10000;
+        if (this.id == randomId){
+            System.out.println(name + " gets free lunch today");
+        } else {
+            System.out.println(name + " does not get freeish lunch today");
+        }
+}
+}
