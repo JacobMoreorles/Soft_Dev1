@@ -1,0 +1,62 @@
+import java.util.Stack;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class Main {
+    public static void main(String[] args) {
+        Stack<Integer> stax = new Stack<>();
+        
+        stax.push(70);
+        stax.push(34);
+        stax.push(807);
+        stax.push(61);
+        stax.push(28);
+        stax.push(563);
+        stax.push(492);
+        stax.push(386);
+        
+        int max = stax.get(0);
+        int min = stax.get(0);
+
+        for (int num : stax) {
+            if (num > max) {
+                max = num;
+            }
+            if (num < min) {
+                min = num;
+            }
+        }
+
+        System.out.println("Max: " + max);
+        System.out.println("Min: " + min);
+
+        System.out.println("Stack size: " + stax.size());
+        
+        LinkedList<Integer> linky = new LinkedList<>();
+
+        linky.add(10);
+        linky.add(20);
+        linky.add(30);
+        linky.add(40);
+        linky.add(50);
+
+        int middle = linky.size() / 2;
+        System.out.println("Middle value: " + linky.get(middle));
+
+        Queue<String> line = new LinkedList<>();
+        line.add("Jacob");
+        line.add("Cristian");
+        line.add("Mason");
+        System.out.println("Line: " + line);
+
+        line.remove();
+        System.out.println("After serving: " + line);
+
+        if (line.contains("Jacob")) {
+        System.out.println("Jacob is still in line");
+
+        System.out.println("Next: " + line.peek());
+        }
+
+    }
+}
