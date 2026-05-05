@@ -1,0 +1,73 @@
+import java.util.Scanner;
+
+public class Debug {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Given examples
+        System.out.println("Enter your first number to be added");
+        int firstInput = sc.nextInt();
+        System.out.println("Enter your second number to be added");
+        int secondInput = sc.nextInt();
+        System.out.println(add(firstInput, secondInput));
+
+        System.out.println("im going to print out the word Dog now.");
+        printDog();
+
+        // P2
+        System.out.println("Problem 2");
+        System.out.println("Enter a number for factorial:");
+        int factInput = sc.nextInt();
+        System.out.println(factorial(factInput));
+
+        // P3
+        System.out.println("Problem 3");
+        System.out.println("Enter a number:");
+        int sumInput = sc.nextInt();
+        System.out.println(sum(sumInput));
+
+        // P5
+        System.out.println("Problem 5");
+        System.out.println("Enter a string:");
+        sc.nextLine(); // clear buffer
+        String text = sc.nextLine();
+        System.out.println(reverse(text));
+    }
+
+    // Given method
+    public static int add(int zyx, int tuv) {
+        return (zyx + tuv);
+    }
+
+    // Given method
+    public static void printDog() {
+        System.out.println("Dog");
+    }
+
+    // P2 Method
+    public static int factorial(int num) {
+        int result = 1;
+        for (int i = 1; i <= num; i++) {
+            result *= i;
+        }
+        return result;
+    }
+
+    // P3 Method
+    public static int sum(int num) {
+        int sum = 0;
+        for (int i = 1; i <= num; i += 2) {
+            sum += i;
+        }
+        return sum;
+    }
+
+    // P5 Method
+    public static String reverse(String input) {
+        String reverse = "";
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reverse += input.charAt(i);
+        }
+        return reverse;
+    }
+}
