@@ -1,0 +1,117 @@
+import java.util.*;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //5 points: take in the person's name and print it back
+        //with a message of "hello, (name)"
+        System.out.println("Enter name: ");
+        String name = sc.nextLine();
+        System.out.println("hello, " + name);
+        //5 points: declare an integer array and populate that array with
+        //at least 10 indices (numbers can be whatever you want)
+        int[] myArray = new int[]{0,1,2,3,4,5,6,7,8,9};
+        //10 points: use a for loop to loop through that array and print out
+        //the number at every index
+        for (int i = 0; i < myArray.length; i++){
+            System.out.println(myArray[i]);
+        }
+        //5 points: without editing what's in the parentheses, how would you make
+        //this while loop print only once?
+        boolean run = true;
+        //commented so you dont infinite loop yourself, uncomment when testing
+        while(run == true){
+            System.out.println("I only printed once!");
+        run = false;
+        }
+
+
+        //5 points: take two inputs from the user, multiply them together, and print them out
+        System.out.println("Pick a number: ");
+            int num = sc.nextInt();
+        System.out.println("Pick a 2nd number: ");
+            int num2 = sc.nextInt();
+        System.out.println(num * num2);
+
+
+        //5 points: Fix this if else statement so it prints the best fit, however you see fit
+        int var = 6;
+        if (var == 7){
+            System.out.println("Variable is 7");
+        } else if (var > 6){
+            System.out.println("Variable is over 6");
+        } else if (var == 6){
+            System.out.println("Variable is 6");
+        } else if (var > 4){
+            System.out.println("Variable is over 4");
+        } else {
+            System.out.println("Variable is 4 or less than 4");
+        }
+
+
+        //function call for below
+        System.out.println("Hello!");
+        agecheck(a);    
+    }
+    //5 points: this function doesnt seem to be printing- why?
+    //(you are not allowed to modify this function)
+    public static String printString(String x){
+    x = ("Rundagar Jones");
+        return(x);
+    }
+    //10 Points
+    //Create a parameter method that takes in someone's age and name
+    public static void agecheck(int a){
+        Scanner sc = new Scanner(System.in);
+
+        int age = sc.nextInt();
+        String name = sc.nextLine();
+    
+    //check if they're over the age of 21: if they are, tell them they can drink
+    //if they're between 18-21, tell them they can smoke but not drink
+    //under 18: only sodie pops
+   
+    if (age >= 21){
+        System.out.println(name + " can drink");
+    } else if (age < 21){
+    System.out.println(name + " can smoke but not drink");
+    } else if (age < 18){
+        System.out.println(name + " gets just Soda");
+    }
+}
+
+    //5 points: call this method in main with your name as the name 
+    //and 20 as the age
+
+    //5 points: make a parameter-less function that simply prints out the phrase "hello, world!"
+    public static String simply(String s){
+    s = ("hello, world!");
+        return(s);
+    }
+    //10 points: make a parameter function that takes in an input, and RETURNS the value + 10
+    //print this value as well!
+    public static int returnTen(int x){
+        Scanner sc = new Scanner(System.in);
+        sc.nextInt(x);
+        return(x + 10);
+    }
+
+
+    //10 points: make a class for an animal
+    //all animals have a name and a species
+    //5 points: create an animal instance, any name and species is fine
+    Animal a1 = new Animal("Peanut", 6);
+    //10 points: make a method for animal called 'eat'
+    //eat prints out "(this animal's name) is eating"
+    //5 points: call the method on the instance you created
+    a1.eat();
+    //10 points: make a child class for dog with animal as the parent
+    // dogs additionally gain 
+    //5 points: create a dog instance, any name and species is fine
+    Dog d1 = new Dog("Done", 7);
+    //10 points: override the eat class to print out "the dog (this dogs name) is eating"
+    //5 points: call this method on the dog you made
+    d1.eat();
+
+}
